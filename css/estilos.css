@@ -132,6 +132,74 @@
     font-family: var(--fuente-mono);
     font-size: 0.9em;
   }
+  p {
+    max-inline-size: 65ch;
+    line-height: var(--interlineado-texto);
+    text-wrap: pretty;
+  }
+  small {
+    font-size: var(--paso-menos-1);
+  }
+  strong {
+    font-weight: 700;
+  }
+  ul,
+  ol {
+    padding-inline-start: var(--espacio-m);
+    margin-block: var(--espacio-s);
+  }
+  li {
+    margin-block-end: var(--espacio-2xs);
+  }
+  hr {
+    border: 0;
+    border-block-start: 1px solid var(--color-borde);
+    margin-block: var(--espacio-l);
+  }
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: var(--espacio-s);
+    border: 1px solid var(--color-borde);
+    text-align: start;
+  }
+  th {
+    font-weight: 700;
+    background-color: var(--color-fondo);
+  }
+  td {
+    font-variant-numeric: tabular-nums;
+  }
+  fieldset {
+    min-inline-size: 0;
+    padding: var(--espacio-s);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+  }
+  legend {
+    padding-inline: var(--espacio-2xs);
+    font-weight: 700;
+  }
+  label {
+    display: inline-block;
+    margin-block-end: var(--espacio-2xs);
+    cursor: pointer;
+  }
+  input,
+  select {
+    min-block-size: 2.75rem;
+    min-inline-size: 2.75rem;
+    max-inline-size: 100%;
+    padding-inline: var(--espacio-xs);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+  }
 }
 @layer layout {
   .contenedor {
