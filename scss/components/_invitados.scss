@@ -1,0 +1,59 @@
+@use "../abstracts" as *;
+
+@layer components {
+  .invitados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-s);
+    padding: var(--espacio-s);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-tarjeta);
+
+    &__titulo {
+      padding-inline: var(--espacio-2xs);
+      font-weight: 700;
+    }
+
+    &__opcion {
+      @include objetivo-tactil;
+
+      display: inline-flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding-inline: var(--espacio-s);
+      border: 2px solid var(--color-borde-control);
+      border-radius: var(--radio-control);
+      background-color: var(--color-superficie);
+      color: var(--color-texto);
+      cursor: pointer;
+    }
+
+    &__control {
+      position: absolute;
+      min-inline-size: 0;
+      min-block-size: 0;
+      inline-size: 1px;
+      block-size: 1px;
+      opacity: 0;
+    }
+
+    &__opcion:has(:checked) {
+      border-color: var(--color-acento);
+      background-color: var(--color-acento-tenue);
+      color: var(--color-acento);
+      font-weight: 700;
+    }
+
+    &__opcion:has(:focus-visible) {
+      @include foco-visible;
+    }
+
+    &__opcion:has(:disabled) {
+      border-style: dashed;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+}
