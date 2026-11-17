@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resumen, invitados y pago de reserva de Los Olivos">
+  <title>Confirmar reserva · Pádel Los Olivos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <a class="cabecera__marca" href="index.html">Pádel Los Olivos</a>
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Turnos</a></li>
+          <li><a class="menu__enlace" href="mis-turnos.html">Mis turnos</a></li>
+          <li><a class="menu__enlace" href="normas.html">Normas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="contenedor portal" tabindex="-1">
+    <h1>Confirmar reserva</h1>
+    <p class="portal__intro">Comprueba los detalles, elige los invitados y acepta las normas antes de continuar.</p>
+    <form class="formulario" action="justificante.html" method="get">
+      <section class="resumen" aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen del turno</h2>
+        <p class="formulario__ayuda">Datos de ejemplo del prototipo. Esta página no recupera automáticamente los parámetros de la pantalla anterior.</p>
+        <dl class="resumen__lista">
+          <div class="resumen__fila"><dt class="resumen__etiqueta">Vivienda</dt><dd class="resumen__valor">3.º A</dd></div>
+          <div class="resumen__fila"><dt class="resumen__etiqueta">Fecha de ejemplo</dt><dd class="resumen__valor">20/11/2026</dd></div>
+          <div class="resumen__fila"><dt class="resumen__etiqueta">Hora</dt><dd class="resumen__valor">18:00 – 19:00 (60 min)</dd></div>
+          <div class="resumen__fila"><dt class="resumen__etiqueta">Pista</dt><dd class="resumen__valor">Central</dd></div>
+        </dl>
+      </section>
+      <fieldset class="invitados">
+        <legend class="invitados__titulo">¿Cuántos invitados no residentes asistirán?</legend>
+        <label class="invitados__opcion"><input class="invitados__control" type="radio" name="invitados" value="0" checked required> 0 invitados</label>
+        <label class="invitados__opcion"><input class="invitados__control" type="radio" name="invitados" value="1"> 1 invitado</label>
+        <label class="invitados__opcion"><input class="invitados__control" type="radio" name="invitados" value="2"> 2 invitados</label>
+        <label class="invitados__opcion"><input class="invitados__control" type="radio" name="invitados" value="3"> 3 invitados</label>
+      </fieldset>
+      <section class="aviso" aria-labelledby="titulo-pago">
+        <h2 class="aviso__titulo" id="titulo-pago">Pago de invitados por Bizum</h2>
+        <p class="aviso__texto">Cada invitado no residente abona 2,00 € por persona mediante Bizum antes de jugar. Máximo 3 invitados.</p>
+        <dl class="aviso__detalle">
+          <div class="aviso__fila"><dt class="aviso__etiqueta">Tarifa:</dt><dd class="aviso__valor">2,00 € por invitado</dd></div>
+          <div class="aviso__fila"><dt class="aviso__etiqueta">Importe según invitados:</dt><dd class="aviso__valor aviso__importe">0: 0 € · 1: 2 € · 2: 4 € · 3: 6 €</dd></div>
+          <div class="aviso__fila"><dt class="aviso__etiqueta">Bizum:</dt><dd class="aviso__valor">600 000 000</dd></div>
+          <div class="aviso__fila"><dt class="aviso__etiqueta">Concepto de ejemplo:</dt><dd class="aviso__valor aviso__concepto"><code>PADEL 3A 2011</code></dd></div>
+        </dl>
+        <p class="aviso__texto">El concepto sigue el formato PADEL + vivienda sin espacios + día y mes. Los importes son orientativos: el prototipo no calcula ni cobra pagos.</p>
+      </section>
+      <label class="formulario__aceptacion" for="acepto-normas">
+        <input class="formulario__check" id="acepto-normas" name="aceptacion" type="checkbox" value="si" required>
+        He leído y acepto las <a href="normas.html">normas de uso de las pistas</a>.
+      </label>
+      <div class="formulario__acciones">
+        <a class="boton boton--secundario" href="index.html">Volver a turnos</a>
+        <button class="boton" type="submit">Confirmar reserva</button>
+      </div>
+    </form>
+  </main>
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <address class="pie__datos">
+        Comunidad de Propietarios Urbanización Los Olivos · CIF H-00000005<br>
+        Paseo de Los Olivos, 10 · 00000 Localidad Ficticia<br>
+        <a href="mailto:administracion@losolivos.example">administracion@losolivos.example</a>
+      </address>
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="normas.html">Normas de uso</a></li>
+        </ul>
+      </nav>
+      <p class="pie__nota"><small>Proyecto académico ficticio · DIW 0615 · 2.º DAW. No se realizan reservas ni pagos reales.</small></p>
+    </div>
+  </footer>
+</body>
+</html>
