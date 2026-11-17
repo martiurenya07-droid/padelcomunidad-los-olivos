@@ -1,58 +1,44 @@
-# PádelComunidad 2.0 · Plantilla de partida
+# PádelComunidad 2.0 · Urbanización Los Olivos
 
-Proyecto integrador de **Diseño de Interfaces Web (0615) · 2.º DAW**.
-Todo el alumnado parte de esta plantilla, use o no Figma.
+Proyecto académico de **Diseño de Interfaces Web (0615) · 2.º DAW · Curso 2026–2027**. Caso 05: Comunidad de Propietarios Urbanización Los Olivos. **Todos los datos son ficticios.**
 
-## Puesta en marcha (2 minutos)
+## Fase 1: sistema de diseño
 
-Requisitos: **Node.js 12.22 o superior** y **VS Code**. Compruébalo con `node -v` y `npm -v`.
+`guia.html` presenta paleta, tokens semánticos, tipografía, espaciado y componentes reutilizables. La arquitectura SCSS emplea `@use`, `@forward`, BEM y capas CSS.
 
-Las dependencias (Sass y Stylelint) ya vienen dentro de la carpeta `node_modules`: **no hace falta ejecutar `npm install`** ni tener conexión a internet.
+## Fase 2: estructura del portal
+
+| Archivo | Página |
+|---|---|
+| `index.html` | Turnos: seleccionar fecha, pista y horario |
+| `reserva.html` | Confirmar reserva: invitados, Bizum y aceptación de normas |
+| `justificante.html` | Justificante: referencia, PIN, turno y estado de pago |
+| `mis-turnos.html` | Mis turnos: tabla y acciones de cancelación |
+| `normas.html` | Normas de uso |
+| `aviso-legal.html` | Aviso legal LSSI |
+| `privacidad.html` | Privacidad RGPD |
+
+Las dos plantillas originales de trabajo están en `plantilla-tarea.html` y `plantilla-lectura.html`. El mapa editable en diagrams.net es `docs/mapa-navegacion.drawio`; su versión exportable SVG está en `docs/mapa-navegacion.svg`.
+
+## Arranque y comprobación
+
+Instala dependencias si es necesario con `npm ci` y ejecuta:
 
 ```bash
-npm run dev        # compila scss/ → css/estilos.css y vigila cambios
+npm run dev    # Sass en vigilancia
+npm run check  # compila Sass + pasa Stylelint
 ```
 
-Abre `guia.html` con **Live Preview** (clic derecho → *Show Preview*) o con tu navegador.
-Al abrir la carpeta, VS Code te propondrá las extensiones recomendadas: acéptalas.
+Abre `index.html` en navegador/Live Preview y recorre las siete páginas. Para ver el sistema de diseño original, abre `guia.html`.
 
-| Script | Qué hace |
-| --- | --- |
-| `npm run dev` | Compila en modo vigilancia mientras trabajas |
-| `npm run build` | Compila una vez |
-| `npm run lint` | Revisa el SCSS con las reglas del proyecto |
-| `npm run check` | `build` + `lint`. **Debe terminar sin errores antes de cada commit** |
+**Importante:** la Fase 2 es una **maqueta HTML de navegación**. No contiene backend ni JavaScript. Los formularios pasan a la siguiente página pero no registran reservas, los ejemplos de justificante no se generan a partir de los datos elegidos y los botones de cancelación son ilustrativos. La funcionalidad real deberá implementarse en una fase posterior.
 
-## Estructura
+## Accesibilidad y validación
 
-```text
-scss/
-├── main.scss          Hoja maestra: solo @use, en orden
-├── _capas.scss        Orden de la cascada con @layer
-├── abstracts/         No genera CSS: tokens, funciones, mixins, verificador de contraste
-│   └── _tokens.scss   ← ÚNICA fuente de verdad del diseño. Empiezas aquí.
-├── tokens/            Convierte los tokens Sass en Custom Properties (:root) y gestiona el tema
-├── base/              Reset y estilos de etiquetas HTML (sin clases)
-├── layout/            Estructura de página (contenedor, rejillas)
-├── components/        Bloques BEM: botón (resuelto), turno (por hacer), guía
-└── utilities/         Clases de utilidad; única capa donde se permite !important
-css/estilos.css        Hoja compilada: la única que enlazan los HTML. No la edites a mano.
-guia.html              Guía de estilo viva
-docs/                  Ficha de caso, decisiones de diseño, registro de licencias
-```
+- Un `<h1>` y un `<main>` por página, landmarks HTML5 y dos navegaciones con nombre.
+- Primer enlace de teclado «Saltar al contenido»; enlace activo marcado con `aria-current="page"`.
+- Radios agrupados en `fieldset` con `legend`, controles etiquetados; turnos ocupados sin nombres de viviendas.
+- Estilos SCSS comprobables con `npm run check`; contraste integrado en Sass.
+- **Validación oficial W3C manual pendiente:** hay que subir las **siete páginas y las dos plantillas** a <https://validator.w3.org/#validate_by_upload>, corregir todos los errores/avisos y guardar nueve capturas *reales* en `docs/validacion/` (véase `docs/validacion/LEEME.md`).
 
-## Reglas que comprueba la plantilla
-
-- **Contraste**: Sass detiene la compilación si un par de `$pares-contraste` no llega al mínimo, en tema claro u oscuro.
-- **Stylelint**: hexadecimales solo en `_tokens.scss`, especificidad máxima (0,2,0), nada de IDs ni `!important`, BEM, anidado ≤ 3, prohibido `@import`.
-
-## Ruta A · Vengo de Figma
-
-1. En Figma, abre el panel de **Variables** (*Local variables*).
-2. Copia cada color a `$primitivos` y cada alias a `$tema` en `scss/abstracts/_tokens.scss`.
-3. Copia tamaños de texto, espaciados y radios **en px**: la plantilla los convierte a rem.
-4. No copies código de plugins de Figma: genera posiciones absolutas y medidas fijas.
-
-## Commits
-
-Un commit al final de cada sesión: `S01: tokens de color del caso 07`.
+Más información: `docs/ficha-caso.md`, `docs/decisiones.md` (Fase 1) y `docs/fase2-decisiones.md` (Fase 2).

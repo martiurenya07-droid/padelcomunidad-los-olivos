@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="840" viewBox="0 0 1240 840" role="img" aria-labelledby="titulo descripcion">
+<title id="titulo">Mapa de navegación · Pádel Los Olivos · Fase 2</title>
+<desc id="descripcion">Cabecera común: Turnos, Mis turnos y Normas. Pie común: Aviso legal, Privacidad y Normas. Flujo de tarea: Turnos, Confirmar reserva, Justificante, Mis turnos. Cada página también enlaza con Turnos por la marca.</desc>
+<defs>
+  <marker id="punta" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#7f4824"/></marker>
+  <style>
+    text{font-family:system-ui,Arial,sans-serif;fill:#1e293b} .titulo{font-size:28px;font-weight:800} .sub{font-size:15px;fill:#64748b} .grupo{font-size:19px;font-weight:800}
+    .caja{fill:#fff;stroke:#7f4824;stroke-width:2;rx:12} .comun{fill:#fbf2ed;stroke:#7f4824;stroke-width:2;rx:12}
+    .nombre{font-weight:750;font-size:17px} .archivo{font-size:13px;fill:#64748b} .flecha{fill:none;stroke:#7f4824;stroke-width:2.5;marker-end:url(#punta)}
+    .etiqueta{font-size:13px;font-weight:650;fill:#65381a} .nota{font-size:13px;fill:#64748b}
+  </style>
+</defs>
+<rect width="1240" height="840" fill="#f8fafc"/>
+<text class="titulo" x="55" y="60">Pádel Los Olivos · Mapa de navegación</text>
+<text class="sub" x="55" y="86">Fase 2 · siete páginas · flujo de reserva y enlaces comunes</text>
+<text class="grupo" x="55" y="143">Flujo de tarea</text>
+<rect class="caja" x="35" y="180" width="244" height="105"/><text class="nombre" x="53" y="221">Turnos</text><text class="archivo" x="53" y="249">index.html</text>
+<rect class="caja" x="342" y="180" width="244" height="105"/><text class="nombre" x="360" y="221">Confirmar reserva</text><text class="archivo" x="360" y="249">reserva.html</text>
+<rect class="caja" x="649" y="180" width="244" height="105"/><text class="nombre" x="667" y="221">Justificante</text><text class="archivo" x="667" y="249">justificante.html</text>
+<rect class="caja" x="956" y="180" width="244" height="105"/><text class="nombre" x="974" y="221">Mis turnos</text><text class="archivo" x="974" y="249">mis-turnos.html</text>
+<rect class="caja" x="183" y="525" width="244" height="105"/><text class="nombre" x="201" y="566">Normas de uso</text><text class="archivo" x="201" y="594">normas.html</text>
+<rect class="caja" x="496" y="525" width="244" height="105"/><text class="nombre" x="514" y="566">Aviso legal</text><text class="archivo" x="514" y="594">aviso-legal.html</text>
+<rect class="caja" x="809" y="525" width="244" height="105"/><text class="nombre" x="827" y="566">Privacidad</text><text class="archivo" x="827" y="594">privacidad.html</text>
+<path class="flecha" d="M279 232 H334"/><text class="etiqueta" x="310.5" y="214" text-anchor="middle">Botón Continuar</text>
+<path class="flecha" d="M586 232 H641"/><text class="etiqueta" x="617.5" y="214" text-anchor="middle">Botón Confirmar</text>
+<path class="flecha" d="M893 232 H948"/><text class="etiqueta" x="924.5" y="214" text-anchor="middle">Enlace Ver mis turnos</text>
+<text class="grupo" x="55" y="353">Navegación común en todas las páginas</text>
+<rect class="comun" x="55" y="387" width="1130" height="102"/>
+<text class="nombre" x="76" y="417">Cabecera y pie · todas las páginas</text>
+<text class="nota" x="76" y="441">Cabecera: marca «Pádel Los Olivos» → Turnos · menú: Turnos / Mis turnos / Normas</text>
+<text class="nota" x="76" y="463">Pie legal: Aviso legal / Privacidad / Normas</text>
+<text class="etiqueta" x="183" y="516">Menú y pie: Normas</text>
+<text class="etiqueta" x="497" y="516">Pie: Aviso legal</text>
+<text class="etiqueta" x="810" y="516">Pie: Privacidad</text>
+<path class="flecha" d="M305 489 V520"/>
+<path class="flecha" d="M619 489 V520"/>
+<path class="flecha" d="M932 489 V520"/>
+<path class="flecha" d="M1110 387 V300 H1080 V285"/>
+<text class="etiqueta" x="1028" y="337">Menú: Mis turnos</text>
+<path class="flecha" d="M96 387 V301 H157 V285"/>
+<text class="etiqueta" x="104" y="329">Marca / menú: Turnos</text>
+<text class="nota" x="55" y="691">Todos los destinos comparten cabecera y pie. No se reproducen 21 flechas individuales.</text>
+<text class="nota" x="55" y="720">En Confirmar reserva existe además «Volver a turnos»; en Justificante «Volver a turnos».</text>
+<text class="nota" x="55" y="749">En Mis turnos existe «Reservar otro turno». La reserva cancelada se representa como demostración estática.</text>
+<text class="nota" x="55" y="795">CIF, domicilio, correo, horario, pistas e importes: ficha del caso 05 · contenido académico ficticio.</text>
+</svg>
