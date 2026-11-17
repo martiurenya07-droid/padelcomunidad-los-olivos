@@ -1,0 +1,160 @@
+@use "../abstracts" as *;
+
+@layer components {
+  .portal {
+    display: grid;
+    gap: var(--espacio-m);
+    align-content: start;
+  }
+
+  .portal__intro {
+    color: var(--color-texto-suave);
+  }
+
+  .portal__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-s);
+    align-items: center;
+  }
+
+  .formulario {
+    display: grid;
+    gap: var(--espacio-m);
+    align-items: start;
+  }
+
+  .formulario__enviar {
+    justify-self: start;
+  }
+
+  .formulario__grupo {
+    display: grid;
+    gap: var(--espacio-2xs);
+  }
+
+  .formulario__opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-xs);
+  }
+
+  .formulario__opcion {
+    display: inline-flex;
+    gap: var(--espacio-2xs);
+    align-items: center;
+    padding: var(--espacio-2xs);
+  }
+
+  .formulario__radio {
+    min-inline-size: 0;
+    min-block-size: 0;
+    accent-color: var(--color-acento);
+  }
+
+  .formulario__tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-s);
+  }
+
+  .formulario__tarjeta {
+    flex: 1 1 13rem;
+  }
+
+  .formulario__ayuda {
+    color: var(--color-texto-suave);
+    font-size: var(--paso-menos-1);
+  }
+
+  .formulario__aceptacion {
+    display: flex;
+    gap: var(--espacio-s);
+    align-items: center;
+    margin-block: var(--espacio-2xs);
+  }
+
+  .formulario__check {
+    flex-shrink: 0;
+    min-inline-size: 0;
+    accent-color: var(--color-acento);
+  }
+
+  .formulario__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-s);
+  }
+
+  .resumen {
+    display: grid;
+    gap: var(--espacio-s);
+    padding: var(--espacio-m);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-superficie);
+  }
+
+  .resumen__lista {
+    display: grid;
+    gap: var(--espacio-s);
+  }
+
+  .resumen__fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--espacio-2xs) var(--espacio-l);
+  }
+
+  .resumen__etiqueta {
+    font-weight: 700;
+  }
+
+  .resumen__valor {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .lectura {
+    display: grid;
+    gap: var(--espacio-l);
+    max-inline-size: 75ch;
+  }
+
+  .lectura__intro {
+    color: var(--color-texto-suave);
+  }
+
+  .lectura__indice {
+    padding: var(--espacio-m);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-superficie);
+  }
+
+  .lectura__indice-titulo {
+    font-size: var(--paso-1);
+  }
+
+  .lectura__seccion {
+    display: grid;
+    gap: var(--espacio-s);
+    scroll-margin-block-start: var(--espacio-m);
+  }
+
+  .tabla-desplazable {
+    max-inline-size: 100%;
+    overflow-x: auto;
+  }
+
+  .tabla-reservas {
+    min-inline-size: 38rem;
+  }
+
+  .tabla-reservas__titulo {
+    padding-block: var(--espacio-xs);
+    text-align: start;
+    font-weight: 700;
+  }
+}

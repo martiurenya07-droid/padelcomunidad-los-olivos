@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+@layer layout {
+  .hueco {
+    margin-block: var(--espacio-m);
+    padding: var(--espacio-xl);
+    border: 2px dashed var(--color-borde-control);
+    border-radius: var(--radio-control);
+    background-color: var(--color-superficie);
+    color: var(--color-texto-suave);
+  }
+}

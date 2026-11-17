@@ -107,6 +107,10 @@
     font-variant-numeric: tabular-nums;
   }
 
+  main {
+    padding-block: var(--espacio-xl);
+  }
+
   // Grupos de formulario.
   fieldset {
     min-inline-size: 0;
