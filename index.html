@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta y elige turno de pádel en Los Olivos">
+  <title>Turnos · Pádel Los Olivos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <a class="cabecera__marca" href="index.html">Pádel Los Olivos</a>
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html" aria-current="page">Turnos</a></li>
+          <li><a class="menu__enlace" href="mis-turnos.html">Mis turnos</a></li>
+          <li><a class="menu__enlace" href="normas.html">Normas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="contenedor portal" tabindex="-1">
+    <h1>Reservar un turno</h1>
+    <p class="portal__intro">Elige fecha, pista y hora. Cada turno dura 60 minutos y las pistas abren de 08:30 a 22:30.</p>
+    <form class="formulario" action="reserva.html" method="get">
+      <div class="formulario__grupo">
+        <label for="fecha-reserva">Fecha de la reserva</label>
+        <input id="fecha-reserva" name="fecha" type="date" required>
+      </div>
+      <fieldset class="formulario__grupo">
+        <legend>¿En qué pista quieres jugar?</legend>
+        <div class="formulario__opciones">
+          <label class="formulario__opcion"><input class="formulario__radio" type="radio" name="pista" value="Central" required checked> Central</label>
+          <label class="formulario__opcion"><input class="formulario__radio" type="radio" name="pista" value="Norte"> Norte</label>
+          <label class="formulario__opcion"><input class="formulario__radio" type="radio" name="pista" value="Sur"> Sur</label>
+        </div>
+      </fieldset>
+      <fieldset class="formulario__grupo">
+        <legend>Selecciona un turno disponible</legend>
+        <p class="formulario__ayuda">Franja de ejemplo de 60 minutos. Un turno ocupado no permite seleccionar ni revela quién lo reservó.</p>
+        <div class="formulario__tarjetas">
+          <label class="turno formulario__tarjeta">
+            <input class="turno__control" type="radio" name="turno" value="18:00-19:00" required checked>
+            <span class="turno__hora">18:00 – 19:00</span>
+            <span class="turno__estado">Disponible · Pista Central</span>
+          </label>
+          <label class="turno formulario__tarjeta">
+            <input class="turno__control" type="radio" name="turno" value="19:00-20:00" disabled>
+            <span class="turno__hora">19:00 – 20:00</span>
+            <span class="turno__estado">Ocupado</span>
+          </label>
+          <label class="turno formulario__tarjeta">
+            <input class="turno__control" type="radio" name="turno" value="20:00-21:00">
+            <span class="turno__hora">20:00 – 21:00</span>
+            <span class="turno__estado">Disponible · Pista Central</span>
+          </label>
+        </div>
+      </fieldset>
+      <p class="formulario__ayuda">Prototipo HTML de la Fase 2: los turnos son ilustrativos; la confirmación no registra datos en un servidor.</p>
+      <button class="boton formulario__enviar" type="submit">Continuar a confirmar reserva</button>
+    </form>
+  </main>
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <address class="pie__datos">
+        Comunidad de Propietarios Urbanización Los Olivos · CIF H-00000005<br>
+        Paseo de Los Olivos, 10 · 00000 Localidad Ficticia<br>
+        <a href="mailto:administracion@losolivos.example">administracion@losolivos.example</a>
+      </address>
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="normas.html">Normas de uso</a></li>
+        </ul>
+      </nav>
+      <p class="pie__nota"><small>Proyecto académico ficticio · DIW 0615 · 2.º DAW. No se realizan reservas ni pagos reales.</small></p>
+    </div>
+  </footer>
+</body>
+</html>
