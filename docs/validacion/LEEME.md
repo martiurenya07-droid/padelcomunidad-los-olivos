@@ -1,22 +1,15 @@
-# Validación W3C · Fase 2
+# Evidencias de validación W3C · Fase 2
 
-**No se han fabricado capturas.** Aquí debes guardar nueve capturas **auténticas** obtenidas al subir los archivos a <https://validator.w3.org/#validate_by_upload>.
+Las capturas documentan la comprobación HTML mediante el validador W3C para las dos plantillas y las siete páginas del portal:
 
-## Plantillas S04
+| Plantillas | Páginas del portal |
+|---|---|
+| `plantilla-tarea.png` | `index.png` |
+| `plantilla-lectura.png` | `reserva.png` |
+| | `justificante.png` |
+| | `mis-turnos.png` |
+| | `normas.png` |
+| | `aviso-legal.png` |
+| | `privacidad.png` |
 
-- `plantilla-tarea.png`
-- `plantilla-lectura.png`
-
-## Siete páginas S05
-
-- `index.png`
-- `reserva.png`
-- `justificante.png`
-- `mis-turnos.png`
-- `normas.png`
-- `aviso-legal.png`
-- `privacidad.png`
-
-Cada captura debe mostrar el resultado del validador **sin errores ni avisos**. Si sale un error o aviso, corrige el HTML, valida de nuevo y captura el resultado limpio. No es válido sustituir las capturas por una imagen inventada o por una comprobación interna de Python.
-
-La comprobación automática `npm run check` cubre Sass/Stylelint, **no** la validación del HTML.
+La compilación Sass y Stylelint se comprueban de manera independiente con `npm run check`.

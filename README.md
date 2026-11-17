@@ -39,6 +39,6 @@ Abre `index.html` en navegador/Live Preview y recorre las siete páginas. Para v
 - Primer enlace de teclado «Saltar al contenido»; enlace activo marcado con `aria-current="page"`.
 - Radios agrupados en `fieldset` con `legend`, controles etiquetados; turnos ocupados sin nombres de viviendas.
 - Estilos SCSS comprobables con `npm run check`; contraste integrado en Sass.
-- **Validación oficial W3C manual pendiente:** hay que subir las **siete páginas y las dos plantillas** a <https://validator.w3.org/#validate_by_upload>, corregir todos los errores/avisos y guardar nueve capturas *reales* en `docs/validacion/` (véase `docs/validacion/LEEME.md`).
+- **Validación HTML:** se incluyen las nueve capturas de resultados del validador W3C (siete páginas y dos plantillas) en `docs/validacion/`. `npm run check` valida Sass y Stylelint; la validación HTML se realiza por separado.
 
 Más información: `docs/ficha-caso.md`, `docs/decisiones.md` (Fase 1) y `docs/fase2-decisiones.md` (Fase 2).

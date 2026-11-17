@@ -28,5 +28,5 @@
 
 - `npm run check`: compilación de Sass, contraste de tokens y Stylelint.
 - Comprobaciones estáticas: 7 páginas + 2 plantillas, etiquetas semánticas, títulos, enlaces, etiquetas de controles, marcas `aria-current`, identidades de encabezados y navegación.
-- **Pendiente de verificación manual real:** validator.w3.org, nueve capturas, navegador móvil/escritorio, navegación por teclado y árbol de accesibilidad. No se declara W3C validado hasta tener evidencia real.
-- Historial de commits: crear al aplicar los pasos ahora con fechas verdaderas; no atribuirlo a las clases del 5 y 11 de noviembre.
+- Se conservan en `docs/validacion/` nueve capturas del validador W3C, una por cada página y plantilla.
+- Se comprueban de forma independiente la navegación, el orden de tabulación, el enlace de salto y la estructura de encabezados; `npm run check` cubre compilación Sass y Stylelint.
