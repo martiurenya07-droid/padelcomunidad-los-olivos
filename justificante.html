@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ejemplo de justificante de reserva de pádel">
+  <title>Justificante · Pádel Los Olivos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="cabecera__interior contenedor">
+      <a class="cabecera__marca" href="index.html">Pádel Los Olivos</a>
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Turnos</a></li>
+          <li><a class="menu__enlace" href="mis-turnos.html">Mis turnos</a></li>
+          <li><a class="menu__enlace" href="normas.html">Normas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido" class="contenedor portal" tabindex="-1">
+    <h1>Justificante de reserva</h1>
+    <p class="portal__intro">Ejemplo de justificante para mostrar la estructura de la Fase 2. No confirma ninguna reserva real.</p>
+    <section class="resumen" aria-labelledby="titulo-justificante">
+      <h2 id="titulo-justificante">Detalles del justificante</h2>
+      <dl class="resumen__lista">
+        <div class="resumen__fila"><dt class="resumen__etiqueta">N.º de reserva</dt><dd class="resumen__valor">OLI-2026-0024 (ejemplo)</dd></div>
+        <div class="resumen__fila"><dt class="resumen__etiqueta">PIN de acceso</dt><dd class="resumen__valor"><code>4827</code> (ejemplo)</dd></div>
+        <div class="resumen__fila"><dt class="resumen__etiqueta">Turno</dt><dd class="resumen__valor">20/11/2026 · 18:00–19:00 · Pista Central</dd></div>
+        <div class="resumen__fila"><dt class="resumen__etiqueta">Vivienda</dt><dd class="resumen__valor">3.º A</dd></div>
+        <div class="resumen__fila"><dt class="resumen__etiqueta">Estado del pago</dt><dd class="resumen__valor">Pendiente de verificar, si hay invitados</dd></div>
+      </dl>
+    </section>
+    <p class="portal__acciones"><a class="boton" href="mis-turnos.html">Ver mis turnos</a> <a class="boton boton--secundario" href="index.html">Volver a turnos</a></p>
+  </main>
+  <footer class="pie">
+    <div class="pie__interior contenedor">
+      <address class="pie__datos">
+        Comunidad de Propietarios Urbanización Los Olivos · CIF H-00000005<br>
+        Paseo de Los Olivos, 10 · 00000 Localidad Ficticia<br>
+        <a href="mailto:administracion@losolivos.example">administracion@losolivos.example</a>
+      </address>
+      <nav aria-label="Legal">
+        <ul class="pie__enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="privacidad.html">Privacidad</a></li>
+          <li><a href="normas.html">Normas de uso</a></li>
+        </ul>
+      </nav>
+      <p class="pie__nota"><small>Proyecto académico ficticio · DIW 0615 · 2.º DAW. No se realizan reservas ni pagos reales.</small></p>
+    </div>
+  </footer>
+</body>
+</html>
